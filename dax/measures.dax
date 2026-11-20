@@ -1,0 +1,21 @@
+// Reference DAX measures for the Orders table (Power Pivot data model).
+// Reconstructed from the KPI definitions used on the dashboard.
+// If your workbook uses slightly different formulas, replace these with the exact ones.
+
+Total Sales =
+SUMX ( Orders, Orders[Quantity] * RELATED ( Products[Price] ) )
+
+Total Quantity =
+SUM ( Orders[Quantity] )
+
+Total Orders =
+DISTINCTCOUNT ( Orders[OrderID] )
+
+Total Customers =
+DISTINCTCOUNT ( Orders[CustomerID] )
+
+Avg Order Value =
+DIVIDE ( [Total Sales], [Total Orders] )
+
+Sales Per Customer =
+DIVIDE ( [Total Sales], [Total Customers] )
