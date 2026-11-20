@@ -274,8 +274,10 @@ Clothing is the top category in every city (27% to 30% of sales), followed by To
 
 **Limitations**
 - Training dataset: results illustrate the method and should not be read as findings about a real company.
-- Products are ranked by **units sold**. Revenue and margin rankings could differ, and no cost data is available, so profitability cannot be assessed.
-- Date reconstruction in Power Query relies on the file name for the month. Dates where both remaining parts are 31 or less and neither matches the month are handled by order of checks, so unusual files should be reviewed.
+- Products are ranked by **units sold**.
+- Revenue and margin rankings could differ, and no cost data is available, so profitability cannot be assessed.
+- Date reconstruction in Power Query relies on the file name for the month.
+- Dates where both remaining parts are 31 or less and neither matches the month are handled by order of checks, so unusual files should be reviewed.
 - Source paths in the M scripts are local and must be updated before refreshing on another machine.
 
 **Next steps**
